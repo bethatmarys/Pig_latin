@@ -13,9 +13,16 @@ List of Specs:
   Program adds "way" to single letter words beginning with a vowel
     input: e
     output: eway
+  Program adds "ay" to single letter words beginning with a consonant
+    input: hello
+    output: helloay
+  Program adds "way" to all words starting with a vowel
+    input: Hello how are you?
+    out: Hello how areway youway?
+  <!-- Program adds "ay" to all words beginning with consonant -->
   Program treats words beginning with "y" as a consonant
     input: year
-  
+    output: yearay
 
 ## Setup/Installation Requirements
 

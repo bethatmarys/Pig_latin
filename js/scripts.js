@@ -16,19 +16,19 @@ $(function() {
 
     userInput = userInput.split("").join("");
 
-    for (var index = 0; index < vowels.length; index +=1) {
+
+// //Adds way to vowels
+    for (var index = 0; index < userInput.length; index +=1) {
       if (userInput[0] === vowels[index]) {
         userInput += "way";
       }
     }
-
+// Adds ay to consonants
     for(var index = 0; index < consonant.length; index +=1) {
       if (userInput[0] === consonant[index]) {
         userInput += "ay";
       }
     }
-
-    // userInput = userInput.join("");
 
     var result = pigLatin(userInput);
 
@@ -38,6 +38,19 @@ $(function() {
 
 
 
+
+
+
+
+
+// userInput = userInput.split("").join("");
+// //Adds way to vowels
+// for (var index = 0; index < userInput.length; index +=1) {
+//   if (userInput[0] === vowels[index]) {
+//     userInput += "way";
+//   }
+// }
+// Adds ay to consonan
 
 
 // var remove = userInput.replace(/ /g, '').replace(/[.,\/#!$%@?'|"+\^&\*;:{}=\-_`~()]0-9/g,"");
