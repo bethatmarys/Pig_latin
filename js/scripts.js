@@ -5,9 +5,6 @@ var pigLatin = function(inputtedPhrase) {
 
 var vowels = ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"]
 
-// var convertStringtoArray = function(inputtedPhrase) {
-//   return inputtedPhrase.split();
-// }
 
 //User Interface Logic
 
@@ -17,19 +14,27 @@ $(function() {
 
     var userInput = $("input#phrase").val();
 
-    userInput = userInput.split("");
+    userInput = userInput.split("").join("");
 
-    // for (var index = 0; index < vowels.length; index +=1) {
-      // return ("vowels[index]" + "a", + "y")
-    // }
+    for (var index = 0; index < vowels.length; index +=1) {
+      if (userInput[0] === vowels[index]) {
+        userInput += "way";
+      }
+    }
+
+    // userInput = userInput.join("");
 
     var result = pigLatin(userInput);
-
-
-    // var remove = userInput.replace(/ /g, '').replace(/[.,\/#!$%@?'|"+\^&\*;:{}=\-_`~()]0-9/g,"");
-
-    // var reversed = remove.split("").reverse().join("");
 
     $("#result").text(result);
   });
 });
+
+
+
+
+
+
+// var remove = userInput.replace(/ /g, '').replace(/[.,\/#!$%@?'|"+\^&\*;:{}=\-_`~()]0-9/g,"");
+
+// var reversed = remove.split("").reverse().join("");
