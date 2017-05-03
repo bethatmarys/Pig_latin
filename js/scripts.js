@@ -4,7 +4,7 @@ var pigLatin = function(inputtedPhrase) {
 };
 
 var vowels = ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"]
-
+var consonant = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"]
 
 //User Interface Logic
 
@@ -22,6 +22,12 @@ $(function() {
       }
     }
 
+    for(var index = 0; index < consonant.length; index +=1) {
+      if (userInput[0] === consonant[index]) {
+        userInput += "ay";
+      }
+    }
+
     // userInput = userInput.join("");
 
     var result = pigLatin(userInput);
@@ -34,7 +40,7 @@ $(function() {
 
 
 
-
 // var remove = userInput.replace(/ /g, '').replace(/[.,\/#!$%@?'|"+\^&\*;:{}=\-_`~()]0-9/g,"");
+
 
 // var reversed = remove.split("").reverse().join("");
